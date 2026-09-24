@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Evently - Discover Events</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        🎟️ Evently
+    </div>
+
+    <div class="search-box">
+        <input
+            id="searchInput"
+            type="text"
+            placeholder="Search concerts, sports, events..."
+        >
+
+        <button onclick="searchEvents()">
+            Search
+        </button>
+    </div>
+
+    <button class="dashboard-btn" onclick="showDashboard()">
+        My Events
+    </button>
+
+</header>
+
+
+<section class="hero">
+
+    <div>
+        <p class="small-title">DISCOVER • CONNECT • EXPERIENCE</p>
+
+        <h1>
+            Find your next<br>
+            unforgettable event.
+        </h1>
+
+        <p>
+            Discover concerts, sports, theatre and events
+            happening around you.
+        </p>
+
+        <button onclick="scrollToEvents()" class="explore-btn">
+            Explore Events →
+        </button>
+    </div>
+
+</section>
+
+
+<section class="container">
+
+    <div class="section-header">
+
+        <div>
+            <h2>Upcoming Events</h2>
+
+            <p>
+                Live events powered by Ticketmaster
+            </p>
+        </div>
+
+        <div class="filters">
+
+            <button onclick="loadCategory('music')">
+                🎵 Music
+            </button>
+
+            <button onclick="loadCategory('sports')">
+                ⚽ Sports
+            </button>
+
+            <button onclick="loadCategory('comedy')">
+                😂 Comedy
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div id="events" class="event-grid">
+
+        <div class="loading">
+            Loading events...
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="calendar-section">
+
+    <div class="container">
+
+        <h2>📅 Event Calendar</h2>
+
+        <p>Dates with events are highlighted.</p>
+
+        <div id="calendar" class="calendar">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<div id="toast" class="toast"></div>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
